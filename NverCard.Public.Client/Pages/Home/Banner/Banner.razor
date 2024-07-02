@@ -1,0 +1,27 @@
+<section class="banner">
+    <div class="container d-f j-c-b a-i-c d-block-sm">
+        <div class="banner-block">
+            <p class="banner-block__description d-f a-i-c">Առաջինը հայկական շուկայում</p>
+            <h1 class="banner-block__title">Ընտրեք նվերներ՝ խնայելով Ձեր ժամանակը</h1>
+            <p class="banner-block__text">
+                Nvercard-ը օնլայն տարբերակով ձեռք բերված քարտ է, որի միջոցով նվերի
+                հասցեատերը կարող է ընտրել սեփական նվերը՝ Ձեր կողմից փոխանցված քարտի միջոցով
+            </p>
+            <a href="/about" class="home-btn">Իմանալ ավելին</a>
+        </div>
+        @if (Slider != null)
+        {
+            <div class="banner-slider swiper" banner-slider>
+                <div class="swiper-wrapper">
+                    @foreach (var item in Slider)
+                    {
+                        <a href="@item.Url" class="swiper-slide banner-slider__list">
+                            <img class="contain" src="@item.ImageUrl" alt="img" />
+                        </a>
+                    }
+                </div>
+                <div class="swiper-pagination d-none-sm"></div>
+            </div>
+        }
+    </div>
+</section>

@@ -1,0 +1,2 @@
+obj\Debug\net5.0/Executor.cs \
+obj\Debug\net5.0/ExecutorGrpc.cs: ../NverCard.Public.Server/Protos/executor.proto

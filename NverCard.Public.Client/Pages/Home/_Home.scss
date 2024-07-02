@@ -1,0 +1,163 @@
+// banner
+@import "./Banner/banner";
+
+.top-sales {
+  background-color: var(--neutral_color_white);
+}
+
+.section-block {
+  padding: 50px 0;
+  @include sm {
+    padding: 30px 0;
+  }
+
+  &__list {
+    margin-bottom: 32px;
+
+    @include xs {
+      margin-bottom: 24px;
+    }
+
+    &--title {
+      font: rem(28px) $Bold;
+      color: var(--neutral_color_black);
+      margin-bottom: 60px;
+
+      @include sm {
+        margin-bottom: 30px;
+      }
+    }
+   
+    &--slide{
+      .card-link{
+        border-radius: var(--border-radius-8);
+      }
+    }
+  }
+}
+
+// advantage
+.advantages {
+  &-block {
+    &__reverse {
+      @include sm {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: unset;
+      }
+    }
+
+    &__list {
+      & + & {
+        margin-top: 32px;
+
+        @include lg {
+          margin-top: 24px;
+        }
+
+        @include sm {
+          margin-top: 16px;
+        }
+      }
+
+      &--info {
+        @include sm {
+          margin-top: 30px;
+        }
+        &-img {
+          @include sm {
+            height: 180px;
+          }
+        }
+
+        &-text {
+          max-width: 517px;
+
+          &__title {
+            border-left: 4px solid var(--primary_color_default-0DB02B);
+            padding-left: 16px;
+            font: rem(20px) $Bold;
+            color: var(--neutral_color_black);
+            margin-bottom: 16px;
+
+            @include sm {
+              padding-left: 14px;
+            }
+          }
+
+          &__main {
+            font: rem(18px) $Regular;
+            line-height: 30px;
+            color: var(--neutral_color_black);
+
+            @include sm {
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// order
+.order {
+  &-block {
+    &__list {
+      &--info {
+        margin-bottom: 50px;
+
+        @include sm {
+          margin-bottom: 20px;
+        }
+
+        &-form {
+          text-align: center;
+
+          &__img {
+            @include wh(100px);
+            margin: 0 auto;
+          }
+
+          &__title {
+            font: rem(20px) $Bold;
+            color: var(--neutral_color_black);
+            display: block;
+            margin-bottom: 16px;
+
+            @include sm {
+              margin-bottom: 14px;
+            }
+          }
+
+          &__main {
+            font: rem(18px) $Regular;
+            line-height: 30px;
+            color: var(--neutral_color_black);
+
+            @include sm {
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//home-btn
+.home-btn {
+  padding: 8px 16px;
+  border: 2px solid var(--primary_color_default-0DB02B);
+  border-radius: var(--border-radius-4);
+  color: var(--primary_color_default-0DB02B);
+  font: rem(16px) $Bold;
+  margin: 0 auto;
+  transition: var(--transition-all-ease);
+
+  &:hover {
+    background-color: var(--primary_color_dark-007F00);
+    border: 2px solid var(--primary_color_dark-007F00);
+    color: var(--neutral_color_white);
+  }
+}

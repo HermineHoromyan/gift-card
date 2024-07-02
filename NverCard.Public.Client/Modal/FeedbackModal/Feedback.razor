@@ -1,0 +1,52 @@
+@if (displayModalFeedback)
+{
+    <div class="modal">
+    <div class="modal-backdrop" @onclick="CloseModal"></div>
+    <div class="modal-dialog d-f a-i-c j-c-c animate_show_down">
+        <div class="feedback modal-content">
+            <i class="icon icon-close modal-close" @onclick="CloseModal"></i>
+            <div class="feedback-modal">
+                <h2 class="feedback-modal__title">Հետադարձ կապ</h2>
+                <div class="feedback-modal__content">
+                    <div class="feedback-modal__content--form">
+                        <p class="feedback-modal__content--form-title">Հեռախոսահամար</p>
+                        <div class="feedback-modal__content--form-box">
+                            <span class='feedback-modal__content--form-box__number'>+374</span>
+                            <input type="tel" name="phone" data-phone-mask
+                                class='feedback-modal__content--form__input feedback-modal__content--form-box__input'
+                                placeholder="(_ _) _ _ - _ _ - _ _ " autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="feedback-modal__content--form">
+                        <p class="feedback-modal__content--form-title">Էլ. հասցե</p>
+                        <input type="email" name="email" placeholder="inf@nvercard.am" autocomplete="off">
+                    </div>
+                    <div class="checkout-block__details--info-main__inputs">
+                        <p class="feedback-modal__content--form-title">Նշումներ (ըստ ցանկության)</p>
+                        <textarea id="textarea" cols="30" rows="10" placeholder="Նշումներ"
+                            class="checkout-block__details--info-main__inputs--textarea"></textarea>
+                    </div>
+                    <div class="feedback-modal__content--form-rules d-f a_i_s">
+                        <label class="checked d-f">
+                            <input class="checkbox" type="checkbox" hidden />
+                            <i class="checked-checkbox d-f a-i-c j-c-c"></i>
+                        </label>
+                        <p class="feedback-modal__content--form-rules__text">
+                            Ես համաձայն եմ
+                            <a href="javascript:;" target="_blank"
+                                class="feedback-modal__content--form-rules__text--link">
+                                Օգտվելու կանոններին
+                            </a> և
+                            <a href="javascript:;" target="_blank"
+                                class="feedback-modal__content--form-rules__text--link">
+                                Գաղտնիության քաղաքականությանը
+                            </a>
+                        </p>
+                    </div>
+                    <button class="btn btn-background d-f a-i-c j-c-c">ՈՒղարկել</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}

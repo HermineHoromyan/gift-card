@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\hermine\Desktop\nvercard\NverCard.Public.Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="_content/Microsoft.AspNetCore.Components.Web.Extensions" Path="C:\Users\hermine\.nuget\packages\microsoft.aspnetcore.components.web.extensions\5.0.0-preview9.20513.1\build\..\staticwebassets\" />
+</StaticWebAssets>

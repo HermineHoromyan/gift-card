@@ -1,0 +1,57 @@
+﻿@using Microsoft.AspNetCore.Components;
+@inject NavigationManager NavigationManager;
+
+<div class="d-none dropdown d-block-md about-block__dropdown">
+    <div class="dropdown-select click-expand d-f a-i-c" window-click data-expand="false">
+        <span class="dropdown-select__selected">@GetName()</span>
+        <i class="icon icon-arrow_down dropdown-select__arrow--black"></i>
+    </div>
+    <ul class="dropdown-list expand-block d-none">
+         <li class="dropdown-list__item">
+            <a class="dropdown-list__item--part @(IsAbout ? "active" : "")" href="/about">Մեր մասին</a>
+        </li>
+        <li class="dropdown-list__item">
+            <a class="dropdown-list__item--part @(IsCompanyInfo ? "active" : "")" href="/companyInfo">Ընկերության մասին</a>
+        </li>
+        <li class="dropdown-list__item">
+            <a class="dropdown-list__item--part @(IsRules ? "active" : "")" href="/rules">Կանոններ</a>
+        </li>
+        <li class="dropdown-list__item">
+            <a class="dropdown-list__item--part @(IsOrderRules ? "active" : "")" href="/orderrules">Պատվերի կարգը</a>
+        </li>
+        <li class="dropdown-list__item">
+            <a class="dropdown-list__item--part @(IsOrderPayRules ? "active" : "")" href="/orderpayrules">Պատվերի վճարման կարգը</a>
+        </li>
+        <li class="dropdown-list__item">
+            <a class="dropdown-list__item--part @(IsOnlinePayRules ? "active" : "")" href="/orderonlinepayrules">Անկանխիկ վճարում</a>
+        </li>
+        <li class="dropdown-list__item">
+            <a class="dropdown-list__item--part @(IsCashPayRules ? "active" : "")" href="/ordercashpayrules">Կանխիկ վճարում</a>
+        </li>
+    </ul>
+</div>
+<div class="account-menu d-none-md">
+    <div class="account-menu__number">
+        <a href="/about">Մեր մասին</a>
+    </div>
+    <ul class="account-menu__pages d-block-sm-flex">
+        <li class="account-menu__pages--single">
+            <a class="account-menu__pages--single-link @(IsCompanyInfo ? "active" : "")" href="/companyInfo">Ընկերության մասին</a>
+        </li>
+        <li class="account-menu__pages--single">
+            <a class="account-menu__pages--single-link @(IsRules ? "active" : "")" href="/rules">Կանոններ</a>
+        </li>
+        <li class="account-menu__pages--single">
+            <a class="account-menu__pages--single-link @(IsOrderRules ? "active" : "")" href="/orderrules">Պատվերի կարգը</a>
+        </li>
+        <li class="account-menu__pages--single">
+            <a class="account-menu__pages--single-link @(IsOrderPayRules ? "active" : "")" href="/orderpayrules">Պատվերի վճարման կարգը</a>
+        </li>
+        <li class="account-menu__pages--single">
+            <a class="account-menu__pages--single-link @(IsOnlinePayRules ? "active" : "")" href="/orderonlinepayrules">Անկանխիկ վճարում</a>
+        </li>
+        <li class="account-menu__pages--single">
+            <a class="account-menu__pages--single-link @(IsCashPayRules ? "active" : "")" href="/ordercashpayrules">Կանխիկ վճարում</a>
+        </li>
+    </ul>
+</div>

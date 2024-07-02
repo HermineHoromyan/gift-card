@@ -1,0 +1,26 @@
+@page "/about"
+
+@using NverCard.Public.Client.Shared.About_Menu
+
+<section class="about account">
+    <div class="container">
+        <div class="crumb d-f a-i-c">
+            <a href="#" class="crumb-logo d-f a-i-c j-c-c d-none-xs">
+                <img class="crumb-logo__img" src="../assets/img/favicon/logo-round-light.png">
+            </a>
+            <i class="crumb-arrow icon icon-arrow_right"></i>
+            <a class="crumb-page d-none-xs" href="/products">Բոլոր քարտերը</a>
+            <a class="crumb-page d-none d-block-xs" href="/">Գլխավոր</a>
+        </div>
+        <div class="about-block d-f">
+            <AboutMenu IsAbout="true" />
+            <div class="about-block__text">
+                <h4 class="about-block__text--title">Մեր մասին</h4>
+                <div class="about-block__text--info">
+                    <video src="../../../assets/videos/coming-soon.mp4" width="100%" controls muted autoplay
+                        loop></video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

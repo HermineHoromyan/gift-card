@@ -1,0 +1,21 @@
+@if (NewArrivalsProducts != null && NewArrivalsProducts.Count() > 0)
+{
+    <section class="section-block">
+        <div class="container">
+            <h2 class="section-block__list--title">Նորույթ</h2>
+            <div class="section-block__list--slide swiper" category-slider>
+                <div class="swiper-wrapper">
+                    @foreach (var product in NewArrivalsProducts)
+                    {
+                        <a class="swiper-slide card-link" href="/product/@product.ProductSeoLink">
+                            <img src="@product.ProductImage.ImageUrl" alt="category">
+                        </a>
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+}
+
+

@@ -1,0 +1,26 @@
+﻿<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
+        <Found Context="routeData">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        </Found>
+        <NotFound>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <div class=" animate_show_up">
+                    <section class="empty">
+                        <div class="empty-block d-f j-c-c a-i-c f-d-c">
+                            <div class="empty-block__img">
+                                <img src="./assets/img/empty/not_found.png" alt="empty">
+
+                            </div>
+                            @*<h4 class="empty-block__title">Նախընտրածներ չկան</h4>*@
+                            <div class="empty-block__button">
+                                <a href="#" class="btn button btn-background empty-block__button--btn">Գլխավոր</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </LayoutView>
+        </NotFound>
+    </Router>
+    </CascadingAuthenticationState>
+

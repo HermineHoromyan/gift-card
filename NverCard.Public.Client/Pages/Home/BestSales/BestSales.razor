@@ -1,0 +1,43 @@
+@if (BestSalesProducts != null && BestSalesProducts.Count() > 0)
+{
+    <section class="top-sales  section-block">
+        <div class="container">
+            <div class="section-block__list">
+                <h2 class="section-block__list--title">Լավագույն վաճառք</h2>
+                <div class="swiper-slider">
+                    <div class="swiper" product-slider>
+                        <div class="swiper-wrapper">
+                            @foreach (var product in BestSalesProducts)
+                            {
+                                <div class="section-block__list--slide card swiper-slide">
+                                    <a href="/product/@product.ProductSeoLink" class="card-link">
+                                        <div class="card-link__img">
+                                            <img src="@product.ProductImage.ImageUrl" alt="card">
+                                        </div>
+                                        <div class="card-link__info">
+                                            <h3 class="card-link__info--name">@product.Name</h3>
+                                            <p class="card-link__info--price">
+                                                @GetCultureInfoPriceString(product.Offers.Select(o => o.Price).Min(),
+                                        product.CurrencyValue) -
+                                                @GetCultureInfoPriceString(product.Offers.Select(o => o.Price).Max(),
+                                        product.CurrencyValue)
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <button class="icon icon-heart @(CheckFavoritStatus(product)) card-icon d-f a-i-c j-c-c"
+                                    disabled="@FavoritButtonIsDisabled"
+                                    @onclick="(() => CreateOrRemoveFavorite(product))"></button>
+                                </div>
+                            }
+                        </div>
+                        <button class="swiper-next icon icon-arrow_right d-f a-i-c j-c-c"></button>
+                        <button class="swiper-prev icon icon-arrow_left d-f a-i-c j-c-c"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-f j-c-c a-i-c">
+                <a href="/products/best-sales" class="home-btn d-f a-i-c j-c-c">Տեսնել բոլորը</a>
+            </div>
+        </div>
+    </section>
+}

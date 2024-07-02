@@ -1,0 +1,90 @@
+.banner {
+  padding: 50px 0;
+  background: linear-gradient(90deg, #f5f5f5 0%, #d3d3d3 96.61%);
+
+  @include sm {
+    padding: 30px 0;
+  }
+
+  &-block {
+    width: calc(100% - 416px);
+    padding-right: 243px;
+
+    // @include lg {
+    //   padding-right: 90px;
+    // }
+
+    @include lg {
+      padding-right: 16px;
+    }
+
+    @include sm {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+    @include lg {
+      margin-bottom: 0;
+    }
+    
+
+    &__description {
+      border-left: 2px solid var(--primary_color_default-0DB02B);
+      padding-left: 16px;
+      margin-bottom: 8px;
+      font: rem(12px) $Regular;
+      color: var(--neutral_color_black);
+    }
+
+    &__title {
+      font: rem(28px) $Bold;
+      line-height: 48px;
+      margin-bottom: 16px;
+      color: var(--neutral_color_black);
+
+      @include md {
+        line-height: 34px;
+        margin-bottom: 8px;
+      }
+    }
+
+    &__text {
+      font: rem(18px) $Regular;
+      line-height: 34px;
+      margin-bottom: 24px;
+      color: var(--neutral_color_black);
+
+      @include md {
+        line-height: 28px;
+      }
+
+      @include sm {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &-slider {
+    max-width: 416px;
+    @include md{
+      max-width: 350px;
+    }
+
+    @include sm {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    
+    @include sm {
+   display: none;
+    }
+
+    &__list {
+      height: 260px;
+      display: block;
+      @include md{
+        height: 230px;
+      }
+    }
+  }
+}

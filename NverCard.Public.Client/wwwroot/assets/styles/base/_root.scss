@@ -1,0 +1,26 @@
+:root {
+  // colors
+  // primary color
+  --primary_color_default-0DB02B: #0db02b;
+  --primary_color_dark-007F00: #007f00;
+  --primary_color_light-5CE35C: #5ce35c;
+
+  // secondary color
+  --secondary_color_default-cd143f: #cd143f;
+  --secondary_color_dark-940019: #940019;
+  --secondary_color_light-FF5669: #ff5669;
+
+  // grey color
+  --grey_color_default-999999: #999999;
+  --grey_color_default-D3D3D3: #d3d3d3;
+  --grey_color_dark-E6E6E6: #e6e6e6;
+  --grey_color_light-F5F5F5: #f5f5f5;
+
+  // neutral
+  --neutral_color_white: #ffffff;
+  --neutral_color_black: #232c31;
+
+  --border-radius-4: 4px;
+  --border-radius-8: 8px;
+  --transition-all-ease: all 0.3s ease;
+}
